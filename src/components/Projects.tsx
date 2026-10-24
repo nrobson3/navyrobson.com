@@ -50,10 +50,14 @@ function Spread({ project: p, flip }: { project: Project; flip: boolean }) {
             <Row key={s.term} term={s.term} value={s.value} />
           ))}
         </dl>
-        {p.link && (
-          <a className="link mt-8 inline-block self-start text-[0.9375rem]" href={p.link.href}>
-            {p.link.label}
-          </a>
+        {p.links && (
+          <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-[0.9375rem]">
+            {p.links.map((l) => (
+              <a key={l.href} className="link" href={l.href}>
+                {l.label}
+              </a>
+            ))}
+          </div>
         )}
       </div>
     </article>
