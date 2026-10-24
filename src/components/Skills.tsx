@@ -9,7 +9,7 @@ export function Skills() {
   return (
     <section id="skills" aria-labelledby="skills-title">
       <ChapterTitle id="skills-title" title="Skills and qualifications" intro={skillsIntro} />
-      <div className="px-[clamp(1rem,6vw,5.5rem)] pb-[16svh]">
+      <div className="px-[clamp(1rem,6vw,5.5rem)] pb-[9svh]">
         {skills.map((g) => (
           <div key={g.title} className="grid gap-y-4 border-t border-rule pt-6 pb-[clamp(2.5rem,6vh,4rem)] md:grid-cols-12 md:gap-x-[clamp(1.5rem,3vw,3rem)]">
             <h3 className="text-[1.375rem] font-light tracking-[-0.01em] md:col-span-3">{g.title}</h3>

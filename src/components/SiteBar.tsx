@@ -47,7 +47,18 @@ export function SiteBar() {
               <li key={c.id} className="border-b border-rule">
                 <a
                   href={`#${c.id}`}
-                  onClick={() => setOpen(false)}
+                  onClick={(e) => {
+                    // the open index locks page scroll, so close it first and glide once
+                    // the lock is released; a plain anchor jump would fire while still locked
+                    e.preventDefault()
+                    setOpen(false)
+                    requestAnimationFrame(() =>
+                      requestAnimationFrame(() => {
+                        document.getElementById(c.id)?.scrollIntoView()
+                        history.pushState(null, '', `#${c.id}`)
+                      }),
+                    )
+                  }}
                   className="block py-4 text-[2rem] leading-none font-light tracking-[-0.02em] text-ink"
                 >
                   {c.nav}

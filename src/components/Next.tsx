@@ -23,7 +23,7 @@ export function Next() {
           ))}
         </div>
       </div>
-      <div className="flex min-h-[80svh] flex-col justify-end px-[clamp(1rem,6vw,5.5rem)] pt-[16svh] pb-10">
+      <div className="flex min-h-[70svh] flex-col justify-end px-[clamp(1rem,6vw,5.5rem)] pt-[10svh] pb-10">
         <p className="text-[clamp(1.25rem,2vw,1.75rem)] font-light text-ink-soft">{next.closing}</p>
         <ul className="mt-6 border-t border-rule">
           {contact.map((c) => (

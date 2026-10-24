@@ -12,7 +12,8 @@ export default function App() {
   // once the sections exist; shared links like navyrobson.com/#projects then land right.
   useEffect(() => {
     const id = decodeURIComponent(window.location.hash.slice(1))
-    if (id) document.getElementById(id)?.scrollIntoView()
+    // instant on load: a shared link should land, not glide down from the top
+    if (id) document.getElementById(id)?.scrollIntoView({ behavior: 'instant' })
   }, [])
 
   return (

@@ -9,7 +9,7 @@ export function Experience() {
   return (
     <section id="experience" aria-labelledby="experience-title">
       <ChapterTitle id="experience-title" title="Experience" intro={x.intro} />
-      <div className="grid gap-y-12 px-[clamp(1rem,6vw,5.5rem)] pb-[16svh] md:grid-cols-12 md:gap-x-[clamp(1.5rem,3vw,3rem)]">
+      <div className="grid gap-y-12 px-[clamp(1rem,6vw,5.5rem)] pb-[9svh] md:grid-cols-12 md:gap-x-[clamp(1.5rem,3vw,3rem)]">
         <div className="md:col-span-4">
           <h3 className="text-[clamp(1.75rem,2.8vw,2.625rem)] leading-[1.05] font-light tracking-[-0.02em]">{x.role}</h3>
           <p className="mt-2 text-ink-soft">

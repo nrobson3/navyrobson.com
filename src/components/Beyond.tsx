@@ -9,7 +9,7 @@ export function Beyond() {
   return (
     <section id="beyond" aria-labelledby="beyond-title">
       <ChapterTitle id="beyond-title" title="Beyond the work" intro={beyondIntro} />
-      <div className="px-[clamp(1rem,6vw,5.5rem)] pb-[16svh]">
+      <div className="px-[clamp(1rem,6vw,5.5rem)] pb-[9svh]">
         {beyond.map((b) => (
           <article
             key={b.id}

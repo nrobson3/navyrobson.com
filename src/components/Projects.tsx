@@ -39,7 +39,7 @@ function Spread({ project: p, flip }: { project: Project; flip: boolean }) {
           className="spread-plate mx-auto w-full max-w-[34rem] md:h-[88svh] md:w-auto md:max-w-none"
         />
       </div>
-      <div className="spread-label pb-[18svh] md:col-span-4 md:flex md:h-svh md:flex-col md:justify-center md:pb-0">
+      <div className="spread-label pb-[12svh] md:col-span-4 md:flex md:h-svh md:flex-col md:justify-center md:pb-0">
         <h3 id={`${p.id}-name`} className="text-[clamp(1.75rem,2.8vw,2.625rem)] leading-[1.05] font-light tracking-[-0.02em] text-ink">
           {p.name}
         </h3>
