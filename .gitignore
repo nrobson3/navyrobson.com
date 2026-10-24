@@ -1,0 +1,17 @@
+# Design tooling stays local; never published with the site
+.claude/
+.impeccable/
+.mcp.json
+scrollcraft/
+node_modules/
+.env
+
+# Raw Fusion output (regenerable; large)
+art/raw/
+
+# Build output (GitHub Actions builds it)
+dist/
+
+# Private working docs, kept local
+PRODUCT.md
+DESIGN.md
