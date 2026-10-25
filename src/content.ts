@@ -140,15 +140,39 @@ export const experience = {
   summary:
     'I take small, well-defined jobs: mechanisms, moulded parts, sketch or photo to CAD, and drawing sets. Every delivery comes as the native Fusion 360 file, STEP, STL where it is printed, and PDF drawings, with a note listing each assumption I made.',
   stats: [
-    { term: 'Jobs', value: '10' },
+    { term: 'Jobs', value: '12' },
     { term: 'Job Success', value: '100%' },
     { term: 'Rating', value: '5.0 on every review' },
-    { term: 'Repeat clients', value: '2' },
+    { term: 'Repeat clients', value: '3' },
   ],
-  quote:
-    'The guy went above and beyond, I just asked for a simple cad model and he gave me a full motion analysis...',
-  quoteSource: 'Client review of the camera gimbal, Upwork, 5.0',
-  link: { label: 'Upwork profile and reviews', href: links.upwork },
+  // Verbatim from the public Upwork reviews, cut at a sentence end where Upwork truncates.
+  // The ISO drawing review is under NDA and the recording-project one is not design work.
+  testimonials: [
+    {
+      quote:
+        'The guy went above and beyond, I just asked for a simple cad model and he gave me a full motion analysis...',
+      source: 'Client review of the camera gimbal, Upwork, 5.0',
+      link: { label: 'See the gimbal', href: '#project-gimbal' },
+    },
+    {
+      quote:
+        'Navy did an excellent job on removing shading from our patent drawings that was considered not acceptable to the Patent office.',
+      source: 'Client review, patent drawings, Upwork, 5.0',
+      link: { label: 'Upwork profile and reviews', href: links.upwork },
+    },
+    {
+      quote:
+        "Hired Navy again for another set of patent drawings for our product patent. He did such a great job the first time I didn't hesitate to rehire.",
+      source: 'Repeat client review, patent drawings, Upwork, 5.0',
+      link: { label: 'Upwork profile and reviews', href: links.upwork },
+    },
+    {
+      quote:
+        'Navy has been a pleasure to hire! His clear and detailed explanations on what he will do and what you can expect for your preferred outcome are exceptional.',
+      source: 'Client review, patent drawings, Upwork, 5.0',
+      link: { label: 'Upwork profile and reviews', href: links.upwork },
+    },
+  ],
 }
 
 // ---------- Chapter 5: Beyond the work ----------

@@ -42,6 +42,20 @@ html { scrollbar-color: var(--color-rule) var(--color-ground); scroll-padding-to
 }
 .link:hover { background-size: 100% 2px; }
 
+/* ---------- testimonials ----------
+   Crossfade: the outgoing review fades while the incoming one fades in over it; visibility
+   flips only after the fade, so a hidden review's link can't be clicked through. */
+.testimonial {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 700ms ease, visibility 0s linear 700ms;
+}
+.testimonial[data-active="true"] {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 700ms ease, visibility 0s;
+}
+
 /* ---------- calibre plate ----------
    --s is the seam as a number (1 = all drawing, 0 = all lit), set per context below from
    scroll; --seam is the same as a length. The render shows below the seam, the linework
