@@ -145,20 +145,7 @@ html { scrollbar-color: var(--color-rule) var(--color-ground); scroll-padding-to
   right: clamp(4rem, 12vw, 13rem);
   --edge: linear-gradient(90deg, transparent, #000 16%);
 }
-@media (max-width: 767px) {
-  .hero-plate {
-    position: relative;
-    top: auto;
-    right: auto;
-    left: auto;
-    height: 46svh;
-    max-height: 30rem;
-    margin-inline: auto;
-    --edge: linear-gradient(#000, #000);
-  }
-  /* no pin on phones: the seam starts half drawn and rises as the hero scrolls away */
-  .hero .plate { --s: clamp(0, (0.78 - var(--f, 0.5)) * 2, 0.55); }
-}
+/* phones drop the hero plate (Hero.tsx); the gearbox keeps its own spread in Projects */
 
 /* ---------- project spreads ----------
    Desktop: plate and label both pin for the article's extra 60svh; the seam falls from

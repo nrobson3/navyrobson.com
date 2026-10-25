@@ -16,8 +16,6 @@ export const hero = {
   alt: 'Exploded 16:1 helical planetary gearbox: motor flange, sun gear, two planet carriers, ring gear and output cap',
   caption: '16:1 helical planetary gearbox',
   fact: 'Measured mesh gap 0.1636 mm, identical on all three planets.',
-  /** the same fact in one phone-width line */
-  factShort: 'Mesh gap 0.1636 mm, all three planets',
 }
 
 export const chapters = [
