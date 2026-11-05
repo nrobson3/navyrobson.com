@@ -7,9 +7,9 @@ import { ChapterTitle } from './ChapterTitle'
  */
 export function Next() {
   const contact = [
-    { label: 'LinkedIn', href: links.linkedin },
-    { label: 'Upwork', href: links.upwork },
-    { label: 'GitHub', href: links.github },
+    { label: 'LinkedIn', href: links.linkedin, handle: 'linkedin.com/in/navy-robson' },
+    { label: 'GitHub', href: links.github, handle: 'github.com/nrobson3' },
+    { label: 'Upwork', href: links.upwork, handle: 'upwork.com/freelancers/navyrobson' },
   ]
   return (
     <section id="next" aria-labelledby="next-title">
@@ -30,15 +30,17 @@ export function Next() {
             <li key={c.label} className="border-b border-rule">
               <a
                 href={c.href}
-                className="block py-[clamp(0.75rem,2vh,1.25rem)] text-[clamp(2.5rem,7vw,6rem)] leading-none font-light tracking-[-0.035em] text-ink transition-colors hover:text-ink-soft"
+                className="group flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between md:gap-6 py-[clamp(0.75rem,2vh,1.25rem)] text-ink transition-colors hover:text-ink-soft"
               >
-                {c.label}
+                <span className="text-[clamp(2.5rem,7vw,6rem)] leading-none font-light tracking-[-0.035em]">{c.label}</span>
+                {/* the address in plain sight, so the link reads as a destination, not a word */}
+                <span className="text-[0.9375rem] text-graphite transition-colors group-hover:text-accent">{c.handle} ↗</span>
               </a>
             </li>
           ))}
         </ul>
         <p className="mt-10 text-[0.8125rem] text-graphite">
-          © 2026 Navy Robson. Every model, render and drawing on this site is my own Fusion 360 work.
+          © 2026 Navy Robson. Every model on this site was designed and checked by me in Fusion 360.
         </p>
       </div>
     </section>

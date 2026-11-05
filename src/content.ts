@@ -43,13 +43,8 @@ export const skills: SkillGroup[] = [
     rows: [
       {
         name: 'Autodesk Fusion 360',
-        detail: 'My main tool, used daily: parametric parts, assemblies with joints and motion links, rendering and drawings.',
-        proof: [at('gimbal', 'Gimbal'), at('gearbox', 'Gearbox'), at('snapfit', 'Housing')],
-      },
-      {
-        name: 'Fusion 360 API',
-        detail: 'Python scripts that build parts and check them: clash sweeps, volume checks and STEP round trips.',
-        proof: [at('gripper', 'Gripper'), at('link', 'NASA link'), { label: 'GitHub', href: links.github }],
+        detail: 'My main tool, used daily: parametric parts, assemblies with joints and motion links, rendering and drawings. The tools behind these models are public on GitHub.',
+        proof: [at('gimbal', 'Gimbal'), at('gearbox', 'Gearbox'), at('snapfit', 'Housing'), { label: 'GitHub', href: links.github }],
       },
       {
         name: 'Onshape',
@@ -83,8 +78,8 @@ export const skills: SkillGroup[] = [
       },
       {
         name: 'Analysis',
-        detail: 'Hand calculations, safety factors, a 2D finite-element solver I wrote, and tolerance checks.',
-        proof: [at('brake', 'Brake'), at('gripper', 'Gripper')],
+        detail: 'Hand calculations, safety factors, clearance and motion studies, and tolerance checks.',
+        proof: [at('gripper', 'Gripper'), at('gimbal', 'Gimbal')],
       },
       {
         name: 'Reverse engineering',
@@ -94,17 +89,12 @@ export const skills: SkillGroup[] = [
     ],
   },
   {
-    title: 'Code',
+    title: 'Programming',
     rows: [
       {
-        name: 'Python',
-        detail: 'numpy, matplotlib and shapely, written as small tools with unit tests.',
-        proof: [{ label: 'GitHub', href: links.github }],
-      },
-      {
-        name: 'Git and GitHub',
-        detail: 'Public, MIT-licensed repositories with tests and documentation.',
-        proof: [{ label: 'GitHub', href: links.github }],
+        name: 'Java',
+        detail: 'Introductory, from Programming Fundamentals at Western.',
+        proof: [],
       },
     ],
   },
@@ -140,9 +130,9 @@ export const experience = {
   summary:
     'I take small, well-defined jobs: mechanisms, moulded parts, sketch or photo to CAD, and drawing sets. Every delivery comes as the native Fusion 360 file, STEP, STL where it is printed, and PDF drawings, with a note listing each assumption I made.',
   stats: [
-    { term: 'Jobs', value: '12' },
+    { term: 'Jobs', value: '15' },
     { term: 'Job Success', value: '100%' },
-    { term: 'Rating', value: '5.0 on every review' },
+    { term: 'Rating', value: '5.0 on all 7 reviews' },
     { term: 'Repeat clients', value: '3' },
   ],
   // Verbatim from the public Upwork reviews, cut at a sentence end where Upwork truncates.
@@ -191,13 +181,13 @@ export const beyond: BeyondEntry[] = [
   {
     id: 'wfr',
     name: 'Western Formula Racing',
-    role: 'Recruit, autonomous subsystem, 2026',
+    role: 'Team Member, since October 2026',
     text:
-      'For my recruit project I designed the driverless service brake shown above: mechanism, sizing, a control simulation and a CAN message set, cited rule by rule to the FSAE Rules and the Driverless Supplement.',
+      'For my recruit project I designed the driverless service brake shown above: a motor-driven crank with a lost-motion link so the driver can always override, checked against the FSAE Driverless rules.',
     facts: [
-      { term: 'Clash check', value: '1,746 part pairs, 0 clashes' },
-      { term: 'Analysis', value: 'A 2D finite-element solver written for the job' },
-      { term: 'Code', value: '54 unit tests' },
+      { term: 'Project', value: 'Driverless service-brake actuator' },
+      { term: 'Rule check', value: 'FSAE Rules and Driverless Supplement' },
+      { term: 'Delivered', value: 'Report, drawings, STEP models and CAN messages' },
     ],
     link: { label: 'See the brake', href: '#project-brake' },
   },
@@ -218,11 +208,11 @@ export const beyond: BeyondEntry[] = [
     name: 'Open-source CAD tools',
     role: 'github.com/nrobson3, MIT licensed',
     text:
-      'The Python behind my models, published as small tested tools: Fusion 360 scripts that build and verify parts, and checks that run on any STL.',
+      'The tools behind these models are public: scripts that build and check Fusion 360 parts, and moulding checks that run on any STL.',
     facts: [
       { term: 'fusion360-parametric-parts', value: 'Gearset, gripper and housing generators with verification' },
       { term: 'injection-moulding-dfm', value: 'Draft, undercuts, wall thickness and parting lines from an STL; 29 tests' },
-      { term: 'cad-drawing-sheets', value: 'ISO drawing sheets from Python, sections cut from meshes; 34 tests' },
+      { term: 'cad-drawing-sheets', value: 'ISO drawing sheets generated from a model, sections cut from meshes; 34 tests' },
     ],
     link: { label: 'GitHub', href: links.github },
   },
@@ -251,7 +241,7 @@ export const callouts: Record<string, Callout[]> = {
   ],
   brake: [
     { x: 62, y: 38, side: 'right', label: 'Slotted pull-link' },
-    { x: 42, y: 50, side: 'left', label: 'AK80-9, 76 bar' },
+    { x: 42, y: 50, side: 'left', label: 'AK80-9 motor' },
   ],
   link: [
     { x: 61, y: 35, side: 'right', label: 'Pin Ø6.06 mm, flagged' },
@@ -326,10 +316,10 @@ export const projects: Project[] = [
       'A motor-driven brake actuator for a driverless Formula SAE car. A slotted link lets the driver always press harder than the motor.',
     made: 'Western Formula Racing recruit project, October 2026',
     specs: [
-      { term: 'Actuator', value: 'CubeMars AK80-9' },
-      { term: 'Line pressure', value: '76 bar, 59 needed' },
-      { term: 'Override detected', value: '94 ms' },
-      { term: 'Machined parts at stall', value: 'Safety factor 4.0 or more' },
+      { term: 'Actuator', value: 'CubeMars AK80-9 motor' },
+      { term: 'Driver override', value: 'Slotted lost-motion link' },
+      { term: 'Rule check', value: 'FSAE Rules and Driverless Supplement' },
+      { term: 'Delivered', value: 'Report, drawings, STEP models, CAN messages' },
     ],
     alt: 'Brake pedal with a gold motor bracket, crank and slotted pull-link on a reference pedal box',
     links: [{ label: 'Design code on GitHub', href: 'https://github.com/nrobson3/driverless-service-brake' }],

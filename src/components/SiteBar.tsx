@@ -1,9 +1,16 @@
 import { useEffect, useState } from 'react'
-import { chapters } from '@/content'
+import { chapters, links } from '@/content'
+
+const profiles = [
+  { label: 'LinkedIn', href: links.linkedin },
+  { label: 'GitHub', href: links.github },
+  { label: 'Upwork', href: links.upwork },
+]
 
 /**
- * The fixed bar: wordmark left, the six chapters right. Phones get a Contents button that
- * opens the same six chapters as a full-screen index, set like a catalogue's contents page.
+ * The fixed bar: wordmark left, the six chapters and then the three profiles right. Phones get
+ * a Contents button that opens the same chapters as a full-screen index, set like a catalogue's
+ * contents page, with the profiles listed under it.
  */
 export function SiteBar() {
   const [open, setOpen] = useState(false)
@@ -22,11 +29,20 @@ export function SiteBar() {
   return (
     <header className="site-bar fixed inset-x-0 top-0 z-10 flex items-baseline justify-between px-[clamp(1rem,6vw,5.5rem)] pt-7 pb-10 text-sm text-graphite">
       <a href="#about" className="font-medium text-ink">Navy Robson</a>
-      <nav aria-label="Chapters" className="hidden gap-7 md:flex">
-        {chapters.map((c) => (
-          <a key={c.id} href={`#${c.id}`} className="transition-colors hover:text-ink">{c.nav}</a>
-        ))}
-      </nav>
+      <div className="hidden items-baseline gap-7 md:flex">
+        <nav aria-label="Chapters" className="flex gap-7">
+          {chapters.map((c) => (
+            <a key={c.id} href={`#${c.id}`} className="transition-colors hover:text-ink">{c.nav}</a>
+          ))}
+        </nav>
+        {/* the profiles sit apart from the chapters, in ink, so they read as ways out; below
+            1024 px the bar has no room, and the hero and the close carry them instead */}
+        <ul aria-label="Profiles" className="hidden gap-5 border-l border-rule pl-7 text-ink lg:flex">
+          {profiles.map((l) => (
+            <li key={l.label}><a className="link" href={l.href}>{l.label}</a></li>
+          ))}
+        </ul>
+      </div>
       <button
         type="button"
         className="text-ink md:hidden"
@@ -64,6 +80,11 @@ export function SiteBar() {
                   {c.nav}
                 </a>
               </li>
+            ))}
+          </ul>
+          <ul aria-label="Profiles" className="mt-8 flex gap-8 text-[0.9375rem] text-ink">
+            {profiles.map((l) => (
+              <li key={l.label}><a className="link" href={l.href}>{l.label}</a></li>
             ))}
           </ul>
         </nav>
