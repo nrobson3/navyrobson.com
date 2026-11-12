@@ -132,12 +132,18 @@ export const experience = {
   stats: [
     { term: 'Jobs', value: '15+' },
     { term: 'Job Success', value: '100%' },
-    { term: 'Rating', value: '5.0 on all 8 reviews' },
+    { term: 'Rating', value: '5.0 on all 9 reviews' },
     { term: 'Repeat clients', value: '3' },
   ],
   // Verbatim from the public Upwork reviews, cut at a sentence end where Upwork truncates.
   // The ISO drawing review is under NDA and the recording-project one is not design work.
   testimonials: [
+    {
+      quote:
+        'Navy took our unusual project and went above and beyond to deliver excellent results...',
+      source: 'Client review, garage-door cable guide mechanism, Upwork, 5.0',
+      link: { label: 'Upwork profile and reviews', href: links.upwork },
+    },
     {
       quote:
         'The guy went above and beyond, I just asked for a simple cad model and he gave me a full motion analysis...',
