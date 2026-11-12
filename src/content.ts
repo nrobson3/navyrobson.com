@@ -211,8 +211,8 @@ export const beyond: BeyondEntry[] = [
       'The tools behind these models are public: scripts that build and check Fusion 360 parts, and moulding checks that run on any STL.',
     facts: [
       { term: 'fusion360-parametric-parts', value: 'Gearset, gripper and housing generators with verification' },
-      { term: 'injection-moulding-dfm', value: 'Draft, undercuts, wall thickness and parting lines from an STL; 29 tests' },
-      { term: 'cad-drawing-sheets', value: 'ISO drawing sheets generated from a model, sections cut from meshes; 34 tests' },
+      { term: 'injection-moulding-analyzer', value: 'Draft, undercuts, wall thickness and parting lines from an STL; 29 tests' },
+      { term: 'cad-drawing-generator', value: 'ISO drawing sheets generated from a model, sections cut from meshes; 34 tests' },
     ],
     link: { label: 'GitHub', href: links.github },
   },
@@ -305,7 +305,7 @@ export const projects: Project[] = [
     ],
     alt: 'Sensor housing with its cover lifted, showing the snap arm, PCB and battery cells inside the white body',
     links: [
-      { label: 'Draft and undercut checks on GitHub', href: 'https://github.com/nrobson3/injection-moulding-dfm' },
+      { label: 'Draft and undercut checks on GitHub', href: 'https://github.com/nrobson3/injection-moulding-analyzer' },
       onUpwork('2110563291403829248'),
     ],
   },
