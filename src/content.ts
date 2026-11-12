@@ -130,9 +130,9 @@ export const experience = {
   summary:
     'I take small, well-defined jobs: mechanisms, moulded parts, sketch or photo to CAD, and drawing sets. Every delivery comes as the native Fusion 360 file, STEP, STL where it is printed, and PDF drawings, with a note listing each assumption I made.',
   stats: [
-    { term: 'Jobs', value: '15' },
+    { term: 'Jobs', value: '15+' },
     { term: 'Job Success', value: '100%' },
-    { term: 'Rating', value: '5.0 on all 7 reviews' },
+    { term: 'Rating', value: '5.0 on all 8 reviews' },
     { term: 'Repeat clients', value: '3' },
   ],
   // Verbatim from the public Upwork reviews, cut at a sentence end where Upwork truncates.
